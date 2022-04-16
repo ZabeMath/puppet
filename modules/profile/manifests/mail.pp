@@ -11,4 +11,12 @@ class profile::mail {
     managehome => false,
     system     => true,
   }
+
+  package { [ 'exim4-daemon-heavy', 'dovecot-core', 'dovecot-imapd' ]:
+    ensure => present,
+  }
+
+  service { [ 'exim4', 'dovecot' ]:
+    ensure => running,
+  }
 }
