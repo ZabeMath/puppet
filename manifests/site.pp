@@ -1,3 +1,3 @@
 node 'indium' {
-    role(mailserver)
+  role(mailserver)
 }
