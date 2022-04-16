@@ -3,5 +3,5 @@ class role::mailserver {
     description => 'Mail server',
   }
 
-  ::include::mail
+  include ::profile::mail
 }
