@@ -1,3 +1,3 @@
-node 'mail.avorwerk.net' {
+node 'indium' {
     role(mailserver)
 }
