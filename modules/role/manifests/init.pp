@@ -7,10 +7,10 @@ define role (
     default => "${description} (role::${title})",
   }
 
-  motd::script { "role-${title}":
-    ensure   => present,
-    priority => 5,
-    content  => template('role/motd.sh.erb'),
-  }
+  #motd::script { "role-${title}":
+  #  ensure   => present,
+  #  priority => 5,
+  #  content  => template('role/motd.sh.erb'),
+  #}
 }
 
