@@ -24,4 +24,10 @@ class profile::mail {
     ensure => present,
     source => 'puppet:///modules/profile/postfix/local-recips',
   }
+
+  file {
+    ensure => present,
+    mode   => '0744',
+    source => 'puppet:///modules/profile/postfix/generate-local-recips-db.sh'
+  }
 }
