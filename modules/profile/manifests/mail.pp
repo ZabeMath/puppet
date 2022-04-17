@@ -30,12 +30,4 @@ class profile::mail {
     mode   => '0744',
     source => 'puppet:///modules/profile/postfix/generate-local-recips-db.sh'
   }
-
-  # virtual-mboxes
-  file { '/etc/postfix/virtual-mboxes.in':
-    ensure => absent,
-  }
-  file { '/etc/postfix/generate-virtual-mboxes-db.sh':
-    ensure => absent,
-  }
 }
