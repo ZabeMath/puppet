@@ -33,12 +33,9 @@ class profile::mail {
 
   # virtual-mboxes
   file { '/etc/postfix/virtual-mboxes.in':
-    ensure => present,
-    source => 'puppet:///modules/profile/postfix/virtual-mboxes',
+    ensure => absent,
   }
   file { '/etc/postfix/generate-virtual-mboxes-db.sh':
-    ensure => present,
-    mode   => '0744',
-    source => 'puppet:///modules/profile/postfix/generate-virtual-mboxes-db.sh'
+    ensure => absent,
   }
 }
