@@ -12,11 +12,11 @@ class profile::mail {
     system     => true,
   }
 
-  package { [ 'exim4-daemon-heavy', 'dovecot-core', 'dovecot-imapd' ]:
+  package { [ 'postfix', 'dovecot-core', 'dovecot-imapd' ]:
     ensure => present,
   }
 
-  service { [ 'exim4', 'dovecot' ]:
+  service { [ 'postfix', 'dovecot' ]:
     ensure => running,
   }
 }
