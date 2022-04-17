@@ -19,4 +19,9 @@ class profile::mail {
   service { [ 'postfix', 'dovecot' ]:
     ensure => running,
   }
+
+  file { '/etc/postfix/local-recips':
+    ensure => present,
+    source => 'puppet:///modules/profile/local-recips',
+  }
 }
