@@ -20,8 +20,8 @@ class profile::mail {
     ensure => running,
   }
 
-  file { '/etc/postfix/local-recips':
+  file { '/etc/postfix/local-recips.in':
     ensure => present,
-    source => 'puppet:///modules/profile/local-recips',
+    source => 'puppet:///modules/profile/postfix/local-recips',
   }
 }
