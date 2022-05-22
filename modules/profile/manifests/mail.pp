@@ -1,10 +1,11 @@
 class profile::mail {
   group { 'vmail':
-    ensure => present,
+    ensure => absent,
     system => true,
   }
 
   user { 'vmail':
+    ensure     => absent,
     gid        => 'vmail',
     shell      => '/bin/false',
     home       => '/srv/dovecot/users',
