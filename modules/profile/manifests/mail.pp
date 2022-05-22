@@ -1,6 +1,6 @@
 class profile::mail {
   group { 'vmail':
-    ensure => absent,
+    ensure => present,
     system => true,
   }
 
